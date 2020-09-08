@@ -1,0 +1,6 @@
+framework module Pods_ECardTests {
+  umbrella header "Pods-ECardTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

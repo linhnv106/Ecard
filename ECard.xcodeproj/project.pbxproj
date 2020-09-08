@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C8683D18AFE2C78687BE9E /* Pods_ECardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A41784077192172988F740 /* Pods_ECardTests.framework */; };
+		68E04A1424586CF516D6F39E /* Pods_ECard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5F61D8A4B6E8328CD0B7CF /* Pods_ECard.framework */; };
+		E2925DDCF0815CAD057E0EBE /* Pods_ECard_ECardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC25BEA6C2F129DD33097F87 /* Pods_ECard_ECardUITests.framework */; };
 		FA33EC742502935C0056329B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33EC732502935C0056329B /* AppDelegate.swift */; };
 		FA33EC762502935C0056329B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33EC752502935C0056329B /* SceneDelegate.swift */; };
 		FA33EC782502935C0056329B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33EC772502935C0056329B /* ViewController.swift */; };
@@ -15,6 +18,19 @@
 		FA33EC802502935F0056329B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA33EC7E2502935F0056329B /* LaunchScreen.storyboard */; };
 		FA33EC8B250293600056329B /* ECardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33EC8A250293600056329B /* ECardTests.swift */; };
 		FA33EC96250293600056329B /* ECardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33EC95250293600056329B /* ECardUITests.swift */; };
+		FA33ECA5250295FC0056329B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECA4250295FC0056329B /* LoginViewController.swift */; };
+		FA33ECAA250299A00056329B /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECA7250299A00056329B /* UserDefault.swift */; };
+		FA33ECAB250299A00056329B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECA8250299A00056329B /* Environment.swift */; };
+		FA33ECAC250299A00056329B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECA9250299A00056329B /* KeychainManager.swift */; };
+		FA33ECAF250299DC0056329B /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECAD250299DB0056329B /* ReachabilityManager.swift */; };
+		FA33ECB0250299DC0056329B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECAE250299DC0056329B /* DataManager.swift */; };
+		FA33ECB325029E960056329B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB225029E950056329B /* AppConstants.swift */; };
+		FA33ECB625029EB40056329B /* ECardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB525029EB40056329B /* ECardError.swift */; };
+		FA33ECB925029F210056329B /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB725029F210056329B /* Tokens.swift */; };
+		FA33ECBA25029F210056329B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB825029F210056329B /* Credentials.swift */; };
+		FA33ECBD2502A0C60056329B /* PaymentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBC2502A0C60056329B /* PaymentApi.swift */; };
+		FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */; };
+		FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E5F61D8A4B6E8328CD0B7CF /* Pods_ECard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39A41784077192172988F740 /* Pods_ECardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CA025688ECFA9C7D006BB5 /* Pods-ECard-ECardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECard-ECardUITests.release.xcconfig"; path = "Target Support Files/Pods-ECard-ECardUITests/Pods-ECard-ECardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		87FC2465E9F5F411ADA3024B /* Pods-ECard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECard.debug.xcconfig"; path = "Target Support Files/Pods-ECard/Pods-ECard.debug.xcconfig"; sourceTree = "<group>"; };
+		A7C83E5D7220B2B3E699BAA0 /* Pods-ECard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECard.release.xcconfig"; path = "Target Support Files/Pods-ECard/Pods-ECard.release.xcconfig"; sourceTree = "<group>"; };
+		B597DBD8718AF0AA29AE9663 /* Pods-ECard-ECardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECard-ECardUITests.debug.xcconfig"; path = "Target Support Files/Pods-ECard-ECardUITests/Pods-ECard-ECardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C80DB5CE63F995696B1205 /* Pods-ECardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECardTests.debug.xcconfig"; path = "Target Support Files/Pods-ECardTests/Pods-ECardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE96AF2CEDFA04DBBEF72E7C /* Pods-ECardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECardTests.release.xcconfig"; path = "Target Support Files/Pods-ECardTests/Pods-ECardTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA33EC702502935C0056329B /* ECard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA33EC732502935C0056329B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA33EC752502935C0056329B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +73,20 @@
 		FA33EC91250293600056329B /* ECardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA33EC95250293600056329B /* ECardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECardUITests.swift; sourceTree = "<group>"; };
 		FA33EC97250293600056329B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA33ECA4250295FC0056329B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA33ECA7250299A00056329B /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefault.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/UserDefault.swift; sourceTree = "<group>"; };
+		FA33ECA8250299A00056329B /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/Environment.swift; sourceTree = "<group>"; };
+		FA33ECA9250299A00056329B /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/KeychainManager.swift; sourceTree = "<group>"; };
+		FA33ECAD250299DB0056329B /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/Network/ReachabilityManager.swift; sourceTree = "<group>"; };
+		FA33ECAE250299DC0056329B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/Network/DataManager.swift; sourceTree = "<group>"; };
+		FA33ECB225029E950056329B /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = ../../../../PFM/PFM/Resources/AppConstants.swift; sourceTree = "<group>"; };
+		FA33ECB525029EB40056329B /* ECardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECardError.swift; path = ../../../../PFM/PFM/Models/ECardError.swift; sourceTree = "<group>"; };
+		FA33ECB725029F210056329B /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tokens.swift; path = ../../../../PFM/PFM/Models/Login/Tokens.swift; sourceTree = "<group>"; };
+		FA33ECB825029F210056329B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = ../../../../PFM/PFM/Models/Login/Credentials.swift; sourceTree = "<group>"; };
+		FA33ECBC2502A0C60056329B /* PaymentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApi.swift; sourceTree = "<group>"; };
+		FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		FC25BEA6C2F129DD33097F87 /* Pods_ECard_ECardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECard_ECardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E04A1424586CF516D6F39E /* Pods_ECard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C8683D18AFE2C78687BE9E /* Pods_ECardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +110,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2925DDCF0815CAD057E0EBE /* Pods_ECard_ECardUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		403E61279FFA2820B9FED82D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5F61D8A4B6E8328CD0B7CF /* Pods_ECard.framework */,
+				FC25BEA6C2F129DD33097F87 /* Pods_ECard_ECardUITests.framework */,
+				39A41784077192172988F740 /* Pods_ECardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CD39B4A1526A8271AAD466B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87FC2465E9F5F411ADA3024B /* Pods-ECard.debug.xcconfig */,
+				A7C83E5D7220B2B3E699BAA0 /* Pods-ECard.release.xcconfig */,
+				B597DBD8718AF0AA29AE9663 /* Pods-ECard-ECardUITests.debug.xcconfig */,
+				79CA025688ECFA9C7D006BB5 /* Pods-ECard-ECardUITests.release.xcconfig */,
+				B9C80DB5CE63F995696B1205 /* Pods-ECardTests.debug.xcconfig */,
+				BE96AF2CEDFA04DBBEF72E7C /* Pods-ECardTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA33EC672502935C0056329B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +147,8 @@
 				FA33EC89250293600056329B /* ECardTests */,
 				FA33EC94250293600056329B /* ECardUITests */,
 				FA33EC712502935C0056329B /* Products */,
+				9CD39B4A1526A8271AAD466B /* Pods */,
+				403E61279FFA2820B9FED82D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +165,13 @@
 		FA33EC722502935C0056329B /* ECard */ = {
 			isa = PBXGroup;
 			children = (
+				FA33ECC12503233E0056329B /* Extension */,
+				FA33ECBE2502A0D10056329B /* ViewControllers */,
+				FA33ECBB2502A0B80056329B /* API */,
+				FA33ECB425029E9D0056329B /* Models */,
+				FA33ECB125029E520056329B /* Constants */,
+				FA33ECA6250299730056329B /* Manager */,
+				FA33ECA3250295EA0056329B /* Account */,
 				FA33EC732502935C0056329B /* AppDelegate.swift */,
 				FA33EC752502935C0056329B /* SceneDelegate.swift */,
 				FA33EC772502935C0056329B /* ViewController.swift */,
@@ -128,6 +201,68 @@
 			path = ECardUITests;
 			sourceTree = "<group>";
 		};
+		FA33ECA3250295EA0056329B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECA4250295FC0056329B /* LoginViewController.swift */,
+				FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		FA33ECA6250299730056329B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECAE250299DC0056329B /* DataManager.swift */,
+				FA33ECAD250299DB0056329B /* ReachabilityManager.swift */,
+				FA33ECA8250299A00056329B /* Environment.swift */,
+				FA33ECA9250299A00056329B /* KeychainManager.swift */,
+				FA33ECA7250299A00056329B /* UserDefault.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FA33ECB125029E520056329B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECB225029E950056329B /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FA33ECB425029E9D0056329B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECB825029F210056329B /* Credentials.swift */,
+				FA33ECB725029F210056329B /* Tokens.swift */,
+				FA33ECB525029EB40056329B /* ECardError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA33ECBB2502A0B80056329B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECBC2502A0C60056329B /* PaymentApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA33ECBE2502A0D10056329B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA33ECC12503233E0056329B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA33EC9A250293600056329B /* Build configuration list for PBXNativeTarget "ECard" */;
 			buildPhases = (
+				526C15CC8FC793E690C7B3F2 /* [CP] Check Pods Manifest.lock */,
 				FA33EC6C2502935C0056329B /* Sources */,
 				FA33EC6D2502935C0056329B /* Frameworks */,
 				FA33EC6E2502935C0056329B /* Resources */,
+				EE47AFD37E5B7DE33D07893C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA33EC9D250293600056329B /* Build configuration list for PBXNativeTarget "ECardTests" */;
 			buildPhases = (
+				74A7346BE0AF93E78F8AE0B8 /* [CP] Check Pods Manifest.lock */,
 				FA33EC82250293600056329B /* Sources */,
 				FA33EC83250293600056329B /* Frameworks */,
 				FA33EC84250293600056329B /* Resources */,
@@ -170,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA33ECA0250293600056329B /* Build configuration list for PBXNativeTarget "ECardUITests" */;
 			buildPhases = (
+				2D3E3456C192539841B25605 /* [CP] Check Pods Manifest.lock */,
 				FA33EC8D250293600056329B /* Sources */,
 				FA33EC8E250293600056329B /* Frameworks */,
 				FA33EC8F250293600056329B /* Resources */,
+				F0BE53B533888770A58472B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,14 +394,130 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D3E3456C192539841B25605 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECard-ECardUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526C15CC8FC793E690C7B3F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A7346BE0AF93E78F8AE0B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE47AFD37E5B7DE33D07893C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECard/Pods-ECard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECard/Pods-ECard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ECard/Pods-ECard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0BE53B533888770A58472B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECard-ECardUITests/Pods-ECard-ECardUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECard-ECardUITests/Pods-ECard-ECardUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ECard-ECardUITests/Pods-ECard-ECardUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA33EC6C2502935C0056329B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA33ECAF250299DC0056329B /* ReachabilityManager.swift in Sources */,
+				FA33ECA5250295FC0056329B /* LoginViewController.swift in Sources */,
+				FA33ECAB250299A00056329B /* Environment.swift in Sources */,
+				FA33ECAC250299A00056329B /* KeychainManager.swift in Sources */,
+				FA33ECBA25029F210056329B /* Credentials.swift in Sources */,
+				FA33ECB625029EB40056329B /* ECardError.swift in Sources */,
+				FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */,
+				FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */,
 				FA33EC782502935C0056329B /* ViewController.swift in Sources */,
+				FA33ECAA250299A00056329B /* UserDefault.swift in Sources */,
 				FA33EC742502935C0056329B /* AppDelegate.swift in Sources */,
+				FA33ECBD2502A0C60056329B /* PaymentApi.swift in Sources */,
+				FA33ECB0250299DC0056329B /* DataManager.swift in Sources */,
 				FA33EC762502935C0056329B /* SceneDelegate.swift in Sources */,
+				FA33ECB325029E960056329B /* AppConstants.swift in Sources */,
+				FA33ECB925029F210056329B /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,9 +688,11 @@
 		};
 		FA33EC9B250293600056329B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87FC2465E9F5F411ADA3024B /* Pods-ECard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9V43M7RFT;
 				INFOPLIST_FILE = ECard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +707,11 @@
 		};
 		FA33EC9C250293600056329B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C83E5D7220B2B3E699BAA0 /* Pods-ECard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9V43M7RFT;
 				INFOPLIST_FILE = ECard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +726,7 @@
 		};
 		FA33EC9E250293600056329B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C80DB5CE63F995696B1205 /* Pods-ECardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +748,7 @@
 		};
 		FA33EC9F250293600056329B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE96AF2CEDFA04DBBEF72E7C /* Pods-ECardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +770,7 @@
 		};
 		FA33ECA1250293600056329B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B597DBD8718AF0AA29AE9663 /* Pods-ECard-ECardUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +790,7 @@
 		};
 		FA33ECA2250293600056329B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CA025688ECFA9C7D006BB5 /* Pods-ECard-ECardUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

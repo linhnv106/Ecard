@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.2.2)
+  - ESTabBarController-swift (2.8.0)
+  - KeyboardAvoidingView (5.0.1):
+    - ViewState (>= 1.0.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - ReachabilitySwift (4.3.0)
+  - ViewState (1.0.0)
+
+DEPENDENCIES:
+  - ESTabBarController-swift
+  - KeyboardAvoidingView (~> 5.0)
+  - Moya
+  - ReachabilitySwift (= 4.3.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - ESTabBarController-swift
+    - KeyboardAvoidingView
+    - Moya
+    - ReachabilitySwift
+    - ViewState
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  KeyboardAvoidingView: ef26d0d7e55ae412e9ef6e02ba84e7540af0ce4e
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  ViewState: 78aa77483e74e592c22e841619b853bc686843be
+
+PODFILE CHECKSUM: e5f73f84f155d75dd7491fe28269d2aba37de55c
+
+COCOAPODS: 1.8.4
