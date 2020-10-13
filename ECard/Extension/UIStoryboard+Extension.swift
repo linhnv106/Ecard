@@ -12,6 +12,7 @@ extension UIStoryboard {
     enum Constants {
         static let loginViewController = "LoginViewController"
         static let registerViewController = "RegisterViewController"
+        static let historyViewController = "HistoryViewController"
 
     }
     static var main: UIStoryboard {
@@ -26,6 +27,9 @@ extension UIStoryboard {
            return self.instantiateViewController(withIdentifier: Constants.registerViewController) as? RegisterViewController
 
        }
-    
+    func instantiateHistoryViewController() -> HistoryViewController? {
+        return self.instantiateViewController(withIdentifier: Constants.historyViewController) as? HistoryViewController
+
+    }
 }
 

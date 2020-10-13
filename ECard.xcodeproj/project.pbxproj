@@ -24,13 +24,16 @@
 		FA33ECAC250299A00056329B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECA9250299A00056329B /* KeychainManager.swift */; };
 		FA33ECAF250299DC0056329B /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECAD250299DB0056329B /* ReachabilityManager.swift */; };
 		FA33ECB0250299DC0056329B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECAE250299DC0056329B /* DataManager.swift */; };
-		FA33ECB325029E960056329B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB225029E950056329B /* AppConstants.swift */; };
-		FA33ECB625029EB40056329B /* ECardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB525029EB40056329B /* ECardError.swift */; };
-		FA33ECB925029F210056329B /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB725029F210056329B /* Tokens.swift */; };
-		FA33ECBA25029F210056329B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECB825029F210056329B /* Credentials.swift */; };
 		FA33ECBD2502A0C60056329B /* PaymentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBC2502A0C60056329B /* PaymentApi.swift */; };
 		FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */; };
 		FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */; };
+		FAF1B00F2534BFB900239300 /* ECardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B00E2534BFB900239300 /* ECardError.swift */; };
+		FAF1B0112534C01200239300 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0102534C01200239300 /* Tokens.swift */; };
+		FAF1B0132534C04600239300 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0122534C04600239300 /* AppConstants.swift */; };
+		FAF1B0152534C07E00239300 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0142534C07E00239300 /* Credentials.swift */; };
+		FAF1B0182534CBD800239300 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0172534CBD800239300 /* HistoryViewController.swift */; };
+		FAF1B01B2534CC8000239300 /* HistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B01A2534CC8000239300 /* HistoryCellView.swift */; };
+		FAF1B01E2534CFE100239300 /* PaymentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B01D2534CFE100239300 /* PaymentItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,13 +82,16 @@
 		FA33ECA9250299A00056329B /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/KeychainManager.swift; sourceTree = "<group>"; };
 		FA33ECAD250299DB0056329B /* ReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/Network/ReachabilityManager.swift; sourceTree = "<group>"; };
 		FA33ECAE250299DC0056329B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../../Amarefork/AmareLifeiOS.linh.nguyen/AmareLife/Managers/Network/DataManager.swift; sourceTree = "<group>"; };
-		FA33ECB225029E950056329B /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConstants.swift; path = ../../../../PFM/PFM/Resources/AppConstants.swift; sourceTree = "<group>"; };
-		FA33ECB525029EB40056329B /* ECardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ECardError.swift; path = ../../../../PFM/PFM/Models/ECardError.swift; sourceTree = "<group>"; };
-		FA33ECB725029F210056329B /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tokens.swift; path = ../../../../PFM/PFM/Models/Login/Tokens.swift; sourceTree = "<group>"; };
-		FA33ECB825029F210056329B /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = ../../../../PFM/PFM/Models/Login/Credentials.swift; sourceTree = "<group>"; };
 		FA33ECBC2502A0C60056329B /* PaymentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApi.swift; sourceTree = "<group>"; };
 		FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		FAF1B00E2534BFB900239300 /* ECardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECardError.swift; sourceTree = "<group>"; };
+		FAF1B0102534C01200239300 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
+		FAF1B0122534C04600239300 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		FAF1B0142534C07E00239300 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		FAF1B0172534CBD800239300 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		FAF1B01A2534CC8000239300 /* HistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCellView.swift; sourceTree = "<group>"; };
+		FAF1B01D2534CFE100239300 /* PaymentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentItem.swift; sourceTree = "<group>"; };
 		FC25BEA6C2F129DD33097F87 /* Pods_ECard_ECardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECard_ECardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,7 +177,6 @@
 				FA33ECB425029E9D0056329B /* Models */,
 				FA33ECB125029E520056329B /* Constants */,
 				FA33ECA6250299730056329B /* Manager */,
-				FA33ECA3250295EA0056329B /* Account */,
 				FA33EC732502935C0056329B /* AppDelegate.swift */,
 				FA33EC752502935C0056329B /* SceneDelegate.swift */,
 				FA33EC772502935C0056329B /* ViewController.swift */,
@@ -225,7 +230,7 @@
 		FA33ECB125029E520056329B /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FA33ECB225029E950056329B /* AppConstants.swift */,
+				FAF1B0122534C04600239300 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -233,9 +238,10 @@
 		FA33ECB425029E9D0056329B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA33ECB825029F210056329B /* Credentials.swift */,
-				FA33ECB725029F210056329B /* Tokens.swift */,
-				FA33ECB525029EB40056329B /* ECardError.swift */,
+				FAF1B01C2534CFC600239300 /* Payment */,
+				FAF1B0142534C07E00239300 /* Credentials.swift */,
+				FAF1B0102534C01200239300 /* Tokens.swift */,
+				FAF1B00E2534BFB900239300 /* ECardError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 		FA33ECBE2502A0D10056329B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAF1B0162534CBC000239300 /* Payment */,
+				FA33ECA3250295EA0056329B /* Account */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +269,31 @@
 				FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAF1B0162534CBC000239300 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1B0192534CC6900239300 /* CellView */,
+				FAF1B0172534CBD800239300 /* HistoryViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		FAF1B0192534CC6900239300 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1B01A2534CC8000239300 /* HistoryCellView.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		FAF1B01C2534CFC600239300 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1B01D2534CFE100239300 /* PaymentItem.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,18 +539,21 @@
 				FA33ECA5250295FC0056329B /* LoginViewController.swift in Sources */,
 				FA33ECAB250299A00056329B /* Environment.swift in Sources */,
 				FA33ECAC250299A00056329B /* KeychainManager.swift in Sources */,
-				FA33ECBA25029F210056329B /* Credentials.swift in Sources */,
-				FA33ECB625029EB40056329B /* ECardError.swift in Sources */,
 				FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */,
 				FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */,
 				FA33EC782502935C0056329B /* ViewController.swift in Sources */,
 				FA33ECAA250299A00056329B /* UserDefault.swift in Sources */,
 				FA33EC742502935C0056329B /* AppDelegate.swift in Sources */,
 				FA33ECBD2502A0C60056329B /* PaymentApi.swift in Sources */,
+				FAF1B0152534C07E00239300 /* Credentials.swift in Sources */,
+				FAF1B01B2534CC8000239300 /* HistoryCellView.swift in Sources */,
+				FAF1B0132534C04600239300 /* AppConstants.swift in Sources */,
+				FAF1B0112534C01200239300 /* Tokens.swift in Sources */,
+				FAF1B00F2534BFB900239300 /* ECardError.swift in Sources */,
+				FAF1B01E2534CFE100239300 /* PaymentItem.swift in Sources */,
 				FA33ECB0250299DC0056329B /* DataManager.swift in Sources */,
+				FAF1B0182534CBD800239300 /* HistoryViewController.swift in Sources */,
 				FA33EC762502935C0056329B /* SceneDelegate.swift in Sources */,
-				FA33ECB325029E960056329B /* AppConstants.swift in Sources */,
-				FA33ECB925029F210056329B /* Tokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ target 'ECard' do
   pod "KeyboardAvoidingView", '~> 5.0'
   pod 'ReachabilitySwift', '4.3.0'
   pod "ESTabBarController-swift"
+  pod 'NVActivityIndicatorView'
+  pod 'SCLAlertView'
 
   target 'ECardTests' do
     inherit! :search_paths

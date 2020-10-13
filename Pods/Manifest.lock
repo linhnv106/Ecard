@@ -7,14 +7,20 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - NVActivityIndicatorView (5.0.1):
+    - NVActivityIndicatorView/Base (= 5.0.1)
+  - NVActivityIndicatorView/Base (5.0.1)
   - ReachabilitySwift (4.3.0)
+  - SCLAlertView (0.8)
   - ViewState (1.0.0)
 
 DEPENDENCIES:
   - ESTabBarController-swift
   - KeyboardAvoidingView (~> 5.0)
   - Moya
+  - NVActivityIndicatorView
   - ReachabilitySwift (= 4.3.0)
+  - SCLAlertView
 
 SPEC REPOS:
   trunk:
@@ -22,7 +28,9 @@ SPEC REPOS:
     - ESTabBarController-swift
     - KeyboardAvoidingView
     - Moya
+    - NVActivityIndicatorView
     - ReachabilitySwift
+    - SCLAlertView
     - ViewState
 
 SPEC CHECKSUMS:
@@ -30,9 +38,11 @@ SPEC CHECKSUMS:
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   KeyboardAvoidingView: ef26d0d7e55ae412e9ef6e02ba84e7540af0ce4e
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  NVActivityIndicatorView: 738e843cb8924e9e4fc3e559d0728031624bf860
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   ViewState: 78aa77483e74e592c22e841619b853bc686843be
 
-PODFILE CHECKSUM: e5f73f84f155d75dd7491fe28269d2aba37de55c
+PODFILE CHECKSUM: f0674f59481b8547e227b43f95a07796dbf55540
 
 COCOAPODS: 1.8.4
