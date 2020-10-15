@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapTegister))
         registerLB.isUserInteractionEnabled = true
         registerLB.addGestureRecognizer(tap)
+        title = "LOGIN"
     }
     @objc func didTapTegister(sender: UITapGestureRecognizer) {
         print("tap working")
@@ -47,24 +48,33 @@ class LoginViewController: UIViewController {
           guard let password = pwdLB.text else { return }
           let credentials = Credentials(email: email, password: password)
 
-
+        showIndicator()
           loginManager.load(target: credentials, completion: completeLogin)
       }
 
       func completeLogin(with result: Result<LoginResponse, MoyaError>) {
           switch result {
           case .success(let loginResponse):
+            hideIndicator()
             if let token = loginResponse.data {
                 KeychainManager.shared.tokens = token
+                if let vc = UIStoryboard.main.instantiateHistoryViewController() {
+                    vc.modalPresentationStyle = .fullScreen
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             } else {
                 SCLAlertView().showError("Login Error", subTitle: "\(loginResponse.message ?? "Login failed")") // Error
             }
 
           case .failure(.objectMapping(let error as ECardError, _)):
+            hideIndicator()
+
             SCLAlertView().showError("Login Error", subTitle: "\(error.description ?? "Login failed")") // Error
 
 
           case .failure:
+            hideIndicator()
+
               let errorTxt = NSLocalizedString("The user name or password is incorrect.", comment: "")
             SCLAlertView().showError("Login Error", subTitle: errorTxt) // Error
 

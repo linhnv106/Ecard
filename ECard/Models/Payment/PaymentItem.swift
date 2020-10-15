@@ -28,8 +28,6 @@ struct PaymentItem: Equatable, Codable {
     var locationName: String?
     var orderId: String?
     var address: String?
-    var lat: Float?
-    var lng: Float?
-
-
+    var lat: String?
+    var lng: String?
 }

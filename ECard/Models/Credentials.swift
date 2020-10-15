@@ -22,7 +22,7 @@ extension Credentials: TargetType, AccessTokenAuthorizable {
     }
     
     var path: String {
-        return "/token"
+        return "/jwt-auth/v1/token"
     }
     
     var method: Moya.Method {

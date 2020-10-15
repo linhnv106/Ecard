@@ -27,6 +27,11 @@
 		FA33ECBD2502A0C60056329B /* PaymentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBC2502A0C60056329B /* PaymentApi.swift */; };
 		FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */; };
 		FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */; };
+		FABA43B025356CB900C74891 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA43AF25356CB900C74891 /* ScannerViewController.swift */; };
+		FAC63983253754320048DC3F /* PaymentConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC63982253754320048DC3F /* PaymentConfirmViewController.swift */; };
+		FADD2C132538A9EF006E1A3F /* CreatedOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD2C122538A9EF006E1A3F /* CreatedOrder.swift */; };
+		FADD2C152538AEC3006E1A3F /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD2C142538AEC3006E1A3F /* OrderStatus.swift */; };
+		FADD2C172538B0F0006E1A3F /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD2C162538B0F0006E1A3F /* ViewController+Extension.swift */; };
 		FAF1B00F2534BFB900239300 /* ECardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B00E2534BFB900239300 /* ECardError.swift */; };
 		FAF1B0112534C01200239300 /* Tokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0102534C01200239300 /* Tokens.swift */; };
 		FAF1B0132534C04600239300 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1B0122534C04600239300 /* AppConstants.swift */; };
@@ -85,6 +90,11 @@
 		FA33ECBC2502A0C60056329B /* PaymentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApi.swift; sourceTree = "<group>"; };
 		FA33ECBF2502A0EA0056329B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		FABA43AF25356CB900C74891 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		FAC63982253754320048DC3F /* PaymentConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentConfirmViewController.swift; sourceTree = "<group>"; };
+		FADD2C122538A9EF006E1A3F /* CreatedOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedOrder.swift; sourceTree = "<group>"; };
+		FADD2C142538AEC3006E1A3F /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
+		FADD2C162538B0F0006E1A3F /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		FAF1B00E2534BFB900239300 /* ECardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECardError.swift; sourceTree = "<group>"; };
 		FAF1B0102534C01200239300 /* Tokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokens.swift; sourceTree = "<group>"; };
 		FAF1B0122534C04600239300 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -267,13 +277,24 @@
 			isa = PBXGroup;
 			children = (
 				FA33ECC4250325470056329B /* UIStoryboard+Extension.swift */,
+				FADD2C162538B0F0006E1A3F /* ViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FABA43AE25356C9F00C74891 /* AddPayment */ = {
+			isa = PBXGroup;
+			children = (
+				FABA43AF25356CB900C74891 /* ScannerViewController.swift */,
+				FAC63982253754320048DC3F /* PaymentConfirmViewController.swift */,
+			);
+			path = AddPayment;
 			sourceTree = "<group>";
 		};
 		FAF1B0162534CBC000239300 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				FABA43AE25356C9F00C74891 /* AddPayment */,
 				FAF1B0192534CC6900239300 /* CellView */,
 				FAF1B0172534CBD800239300 /* HistoryViewController.swift */,
 			);
@@ -292,6 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF1B01D2534CFE100239300 /* PaymentItem.swift */,
+				FADD2C122538A9EF006E1A3F /* CreatedOrder.swift */,
+				FADD2C142538AEC3006E1A3F /* OrderStatus.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -538,9 +561,12 @@
 				FA33ECAF250299DC0056329B /* ReachabilityManager.swift in Sources */,
 				FA33ECA5250295FC0056329B /* LoginViewController.swift in Sources */,
 				FA33ECAB250299A00056329B /* Environment.swift in Sources */,
+				FABA43B025356CB900C74891 /* ScannerViewController.swift in Sources */,
 				FA33ECAC250299A00056329B /* KeychainManager.swift in Sources */,
 				FA33ECC5250325480056329B /* UIStoryboard+Extension.swift in Sources */,
 				FA33ECC02502A0EA0056329B /* RegisterViewController.swift in Sources */,
+				FAC63983253754320048DC3F /* PaymentConfirmViewController.swift in Sources */,
+				FADD2C172538B0F0006E1A3F /* ViewController+Extension.swift in Sources */,
 				FA33EC782502935C0056329B /* ViewController.swift in Sources */,
 				FA33ECAA250299A00056329B /* UserDefault.swift in Sources */,
 				FA33EC742502935C0056329B /* AppDelegate.swift in Sources */,
@@ -554,6 +580,8 @@
 				FA33ECB0250299DC0056329B /* DataManager.swift in Sources */,
 				FAF1B0182534CBD800239300 /* HistoryViewController.swift in Sources */,
 				FA33EC762502935C0056329B /* SceneDelegate.swift in Sources */,
+				FADD2C152538AEC3006E1A3F /* OrderStatus.swift in Sources */,
+				FADD2C132538A9EF006E1A3F /* CreatedOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -712,7 +740,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

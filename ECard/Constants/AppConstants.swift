@@ -25,8 +25,8 @@ enum AppConstants {
     }
     
     // MARK: - Base URL
-    static let devURL = URL(string: "http://ecard.darkvn.net/wp-json/jwt-auth/v1")!
-    static let prodURL = URL(string: "http://ecard.darkvn.net/wp-json/jwt-auth/v1")!
+    static let devURL = URL(string: "http://ecard.darkvn.net/wp-json")!
+    static let prodURL = URL(string: "http://ecard.darkvn.net/wp-json")!
     
     // MARK: - UI
     static let animationInterval: TimeInterval = 0.5
