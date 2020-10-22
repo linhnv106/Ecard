@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         loginBtn.layer.cornerRadius = 8
         loginBtn.layer.masksToBounds = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapTegister))
@@ -58,10 +59,16 @@ class LoginViewController: UIViewController {
             hideIndicator()
             if let token = loginResponse.data {
                 KeychainManager.shared.tokens = token
-                if let vc = UIStoryboard.main.instantiateHistoryViewController() {
-                    vc.modalPresentationStyle = .fullScreen
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
+//                if let vc = UIStoryboard.main.instantiateHistoryViewController() {
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.navigationController?.pushViewController(vc, animated: true)
+//                }
+
+                let tabBarController = TabBarManager.systemStyle()
+                tabBarController.modalPresentationStyle = .fullScreen
+
+                self.present(tabBarController, animated: true, completion: nil)
+
             } else {
                 SCLAlertView().showError("Login Error", subTitle: "\(loginResponse.message ?? "Login failed")") // Error
             }

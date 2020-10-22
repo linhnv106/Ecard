@@ -25,8 +25,8 @@ class PaymentConfirmViewController: UIViewController {
     var dataManager = DataManager<PaymentApi, CreatedOrder>()
 
     @IBAction func didTapProcess(_ sender: Any) {
-
-        let qrId = dataDic?["QR_ID"] as? String
+        showIndicator()
+        let qrId = "\((dataDic?["QR_ID"] as? Int)!)"
         var price : String = ""
         if let amount = dataDic?["AMOUNT"] as? Float {
             if amount > 0 {
@@ -45,8 +45,20 @@ class PaymentConfirmViewController: UIViewController {
 
 
     }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+     @objc func checkOrderStatus(){
+        if openPayment {
+            checkOrder()
+            openPayment = false
+        }
+     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(checkOrderStatus), name: UIApplication.willEnterForegroundNotification, object: nil)
+
         title = "PAYMENT PROCESS"
         if let data = dataDic {
             if let title = data["QR_TITLE"] as? String {
@@ -73,9 +85,10 @@ class PaymentConfirmViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if openPayment {
-            checkOrder()
-        }
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     func completeGetOrder(with result: Result<CreatedOrder, MoyaError>) {
         switch result {
@@ -84,13 +97,20 @@ class PaymentConfirmViewController: UIViewController {
             print("\(newOrder)")
             order = newOrder
             if let urlString = newOrder.url {
-                if let url = URL(string: urlString) {
+                 let url = URL(string: urlString)
+                if let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+                    let url = URL(string: encoded)
+                {
                     openPayment = true
                     UIApplication.shared.open(url)
                 }
+
+
+
             }
         case.failure( let error) :
             hideIndicator()
+            openPayment = false
             SCLAlertView().showError("Error", subTitle: "Can not create new Order") // Error
         }
     }
@@ -110,10 +130,10 @@ class PaymentConfirmViewController: UIViewController {
 
                 let alertView = SCLAlertView()
 
-                alertView.addButton("Done") {
-                    self.navigationController?.popViewController(animated: true)
-                    print("Second button tapped")
-                }
+//                alertView.addButton("Done") {
+//                    self.navigationController?.popViewController(animated: true)
+//                    print("Second button tapped")
+//                }
                 alertView.showSuccess("Success", subTitle: "\(orderStatus.message ?? "Payment Sucessful!")")
 
                     return

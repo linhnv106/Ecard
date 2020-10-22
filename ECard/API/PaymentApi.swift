@@ -57,17 +57,16 @@ extension PaymentApi: TargetType, AccessTokenAuthorizable {
             return .requestPlain
 
         case .getCreateOrder(let qrId,  let price, let note):
-           return .requestParameters(parameters: ["QR_ID": qrId,
-                                                  "Price": price, "Note": note],
-            encoding: URLEncoding.httpBody)
+            let createOrder = CreateOrderObject(qrId: qrId, price: price, note: note)
+            return .requestJSONEncodable(createOrder)
         case .checkOrderStatus(let orderId) :
-                      return .requestParameters(parameters: ["order_id": orderId],
-                       encoding: URLEncoding.httpBody)
+            let orderStatus = OrderStatus(orderId: orderId, code: 0, message: "")
+            return .requestJSONEncodable(orderStatus)
         }
      }
 
      var headers: [String: String]? {
-         return ["Content-type": "application/json"]
+        return ["Content-type": "application/json; charset=utf-8"]
      }
     
     

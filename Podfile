@@ -12,6 +12,7 @@ target 'ECard' do
   pod "ESTabBarController-swift"
   pod 'NVActivityIndicatorView'
   pod 'SCLAlertView'
+  pod "ESTabBarController-swift"
 
   target 'ECardTests' do
     inherit! :search_paths

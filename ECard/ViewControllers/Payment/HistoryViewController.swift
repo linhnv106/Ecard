@@ -22,22 +22,28 @@ class HistoryViewController: UIViewController {
     var note: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "PAYMENT HISTORY"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        self.title = "Lịch sử"
+        let image = UIImage(named: "qr")?.withRenderingMode(.alwaysOriginal)
+        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(addTapped))
+
+        navigationItem.rightBarButtonItem = button
         tableView.dataSource = self
         tableView.delegate = self
-        loadPaymentHistory()
     }
     @objc func addTapped() {
         let vc = ScannerViewController()
         qrId = nil
         vc.delegate = self
         vc.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(vc, animated: true)
+        self.present(vc, animated: true, completion:nil)
+//        navigationController?.pushViewController(vc, animated: true)
+//        onScanSuccess(data: "")
 
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadPaymentHistory()
+
     }
     func loadPaymentHistory() {
         showIndicator()
@@ -81,6 +87,7 @@ extension HistoryViewController: UITableViewDelegate {
 extension HistoryViewController : ScanBarCodeDelegate {
     func onScanSuccess(data: String) {
         print("on barcode return : \(data)")
+
         var dictonary: NSDictionary?
         if let dataJson = data.data(using: .utf8) {
 

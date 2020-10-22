@@ -95,8 +95,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     func found(code: String) {
         print(code)
-        delegate?.onScanSuccess(data: code)
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: {
+            self.delegate?.onScanSuccess(data: code)
+
+        })
     }
 
     override var prefersStatusBarHidden: Bool {
