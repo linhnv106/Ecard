@@ -22,14 +22,17 @@ class TabBarManager {
                v1?.tabBarItem = ESTabBarItem.init(TabBarItemView(),title: "Trang chủ", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
 
             let nav = UINavigationController()
-            nav.viewControllers  = [v2!]
-            nav.tabBarItem = ESTabBarItem.init(TabBarItemView(),title: "Lịch sử", image: UIImage(named: "history"), selectedImage: UIImage(named: "history"))
+            nav.viewControllers  = [v1!]
+        v2?.tabBarItem = ESTabBarItem.init(TabBarItemView(),title: "Lịch sử", image: UIImage(named: "history"), selectedImage: UIImage(named: "history"))
                 v3?.tabBarItem = ESTabBarItem.init(TabBarItemView(),title: "Cá nhân", image: UIImage(named: "profile"), selectedImage: UIImage(named: "profile"))
 
 
                tabBarController.tabBar.shadowImage = nil
-                   
-        tabBarController.viewControllers = [v1!, nav, v3!]
+        let nav2 = UINavigationController()
+        nav2.viewControllers  = [v3!]
+        let nav3 = UINavigationController()
+        nav3.viewControllers  = [v2!]
+        tabBarController.viewControllers = [nav, nav3, nav2]
                
                return tabBarController
     }

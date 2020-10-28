@@ -10,6 +10,7 @@ import Foundation
 import Moya
 enum PaymentApi {
     case loadHistory
+    case loadHistoryDetail(paymentId: String)
     case checkOrderStatus(orderId : String)
     case getCreateOrder(qrId: String, price: String, note: String)
 
@@ -26,6 +27,8 @@ extension PaymentApi: TargetType, AccessTokenAuthorizable {
         switch self {
         case .loadHistory:
             return "/v2/my-history"
+        case .loadHistoryDetail(let paymentId):
+            return "/v2/my-history/\(paymentId)"
 
         case .getCreateOrder:
             return "/v2/getOrder"
@@ -37,7 +40,7 @@ extension PaymentApi: TargetType, AccessTokenAuthorizable {
 
      var method: Moya.Method {
          switch self {
-         case .loadHistory:
+         case .loadHistory,.loadHistoryDetail:
             return .get
 
          case .getCreateOrder,.checkOrderStatus:
@@ -53,7 +56,7 @@ extension PaymentApi: TargetType, AccessTokenAuthorizable {
 
      var task: Task {
         switch self {
-        case .loadHistory:
+        case .loadHistory,.loadHistoryDetail:
             return .requestPlain
 
         case .getCreateOrder(let qrId,  let price, let note):

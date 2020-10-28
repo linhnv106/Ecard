@@ -19,6 +19,11 @@ struct PaymentItem: Equatable, Codable {
         case address = "address"
         case lat = "lat"
         case lng = "lng"
+        case vt_transaction_id = "vt_transaction_id"
+        case trans_amount = "trans_amount"
+        case payment_status_mgs = "payment_status_mgs"
+        case note = "note"
+        case map_url = "map_url"
     }
     var id: Int?
     var title: String?
@@ -30,4 +35,9 @@ struct PaymentItem: Equatable, Codable {
     var address: String?
     var lat: String?
     var lng: String?
+    var vt_transaction_id: String?
+    var trans_amount: String?
+    var payment_status_mgs: String?
+    var note: String?
+    var map_url: String?
 }

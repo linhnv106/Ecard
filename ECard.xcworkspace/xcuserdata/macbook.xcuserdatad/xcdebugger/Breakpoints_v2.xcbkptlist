@@ -20,5 +20,84 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B896E861-A652-4C88-8015-C40E7D8738C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ECard/ViewControllers/Payment/HistoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89F87F2C-95EA-4C93-8A2B-CE864BCBA679"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ECard/ViewControllers/Payment/DetailPaymentViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "completeLoadPaymentHistory(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "89F87F2C-95EA-4C93-8A2B-CE864BCBA679 - eeb4d483495e8c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ECard.DetailPaymentViewController.completeLoadPaymentHistory(with: Swift.Result&lt;ECard.PaymentItem, Moya.MoyaError&gt;) -&gt; ()"
+                  moduleName = "ECard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/LinhNguyen/Developments/ECard/ECard/ECard/ViewControllers/Payment/DetailPaymentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "130">
+               </Location>
+               <Location
+                  uuid = "89F87F2C-95EA-4C93-8A2B-CE864BCBA679 - eeb4d483495e8c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ECard.DetailPaymentViewController.completeLoadPaymentHistory(with: Swift.Result&lt;ECard.PaymentItem, Moya.MoyaError&gt;) -&gt; ()"
+                  moduleName = "ECard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/LinhNguyen/Developments/ECard/ECard/ECard/ViewControllers/Payment/DetailPaymentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  uuid = "89F87F2C-95EA-4C93-8A2B-CE864BCBA679 - eeb4d483495e8c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ECard.DetailPaymentViewController.completeLoadPaymentHistory(with: Swift.Result&lt;ECard.PaymentItem, Moya.MoyaError&gt;) -&gt; ()"
+                  moduleName = "ECard"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/LinhNguyen/Developments/ECard/ECard/ECard/ViewControllers/Payment/DetailPaymentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "281">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

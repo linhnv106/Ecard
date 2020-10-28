@@ -16,6 +16,8 @@ extension UIStoryboard {
         static let paymentConfirmViewController = "PaymentConfirmViewController"
         static let profileViewController = "ProfileViewController"
         static let dashboardViewController = "DashboardViewController"
+        static let updateProfileViewController = "UpdateProfileViewController"
+        static let detailPaymentViewController = "DetailPaymentViewController"
 
 
     }
@@ -45,6 +47,14 @@ extension UIStoryboard {
     }
     func instantiateProfileViewController() -> ProfileViewController? {
         return self.instantiateViewController(withIdentifier: Constants.profileViewController) as? ProfileViewController
+
+    }
+    func instantiateUpdateProfileViewController() -> UpdateProfileViewController? {
+        return self.instantiateViewController(withIdentifier: Constants.updateProfileViewController) as? UpdateProfileViewController
+
+    }
+    func instantiateDetailPaymentViewController() -> DetailPaymentViewController? {
+        return self.instantiateViewController(withIdentifier: Constants.detailPaymentViewController) as? DetailPaymentViewController
 
     }
 }

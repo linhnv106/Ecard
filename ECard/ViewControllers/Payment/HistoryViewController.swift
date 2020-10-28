@@ -17,29 +17,13 @@ class HistoryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     var historyManager = DataManager<PaymentApi, [PaymentItem]>()
     var paymentItems = [PaymentItem]()
-    var qrId: String? = nil
-    var price: String = ""
-    var note: String = ""
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Lịch sử"
-        let image = UIImage(named: "qr")?.withRenderingMode(.alwaysOriginal)
-        let button = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(addTapped))
-
-        navigationItem.rightBarButtonItem = button
         tableView.dataSource = self
         tableView.delegate = self
     }
-    @objc func addTapped() {
-        let vc = ScannerViewController()
-        qrId = nil
-        vc.delegate = self
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion:nil)
-//        navigationController?.pushViewController(vc, animated: true)
-//        onScanSuccess(data: "")
-
-    }
+   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadPaymentHistory()
@@ -75,6 +59,15 @@ extension HistoryViewController : UITableViewDataSource {
         cell.initData(with: paymentItems[indexPath.row])
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if let vc = UIStoryboard.main.instantiateDetailPaymentViewController() {
+                           vc.modalPresentationStyle = .fullScreen
+
+            vc.paymentId = "\(self.paymentItems[indexPath.row].id ??  0)"
+                           self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
 
 }
@@ -84,116 +77,4 @@ extension HistoryViewController: UITableViewDelegate {
     }
 
 }
-extension HistoryViewController : ScanBarCodeDelegate {
-    func onScanSuccess(data: String) {
-        print("on barcode return : \(data)")
 
-        var dictonary: NSDictionary?
-        if let dataJson = data.data(using: .utf8) {
-
-             do {
-                dictonary =  try JSONSerialization.jsonObject(with: dataJson, options: [.allowFragments]) as? NSDictionary
-
-                    if let myDictionary = dictonary
-                      {
-                          print(" QR_ID is: \(myDictionary["QR_ID"]!)")
-                        let qrID = "\(myDictionary["QR_ID"]!)"
-
-                        let paymentInfo = "(\(myDictionary["QR_TITLE"]) \(myDictionary["QR_LOCATION"]) "
-                        let amount = myDictionary["AMOUNT"] as! Float
-
-                        if let vc = UIStoryboard.main.instantiatePaymentConfirmViewController() {
-                                           vc.modalPresentationStyle = .fullScreen
-                            vc.dataDic = myDictionary
-                                           self.navigationController?.pushViewController(vc, animated: true)
-                                       }
-//                        showInfo(paymentInfo: paymentInfo, orderId: qrID, amount: amount)
-                      }
-                    } catch let error as NSError {
-
-                    print(error)
-                 }
-        }
-    }
-
-    func showInfo(paymentInfo: String, orderId: String, amount: Float) {
-        // Example of using the view to add two text fields to the alert
-        // Create the subview
-        let appearance = SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
-            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
-            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
-            showCloseButton: false
-        )
-
-        // Initialize SCLAlertView using custom Appearance
-        let alert = SCLAlertView(appearance: appearance)
-
-        if amount == 0 {
-        // Creat the subview
-        let subview = UIView(frame: CGRect(x: 0,y: 0,width: 500,height: 350))
-            let x = (subview.frame.width - 250) / 2
-
-            let label1 = UILabel(frame: CGRect(x: x,y: 10,width: 250,height: 40))
-//            textfield1.layer.borderColor = UIColor.green.cgColor
-//            textfield1.layer.borderWidth = 1.5
-//            textfield1.layer.cornerRadius = 5
-            label1.text = paymentInfo
-            label1.textAlignment = NSTextAlignment.left
-            label1.addSubview(label1)
-
-
-        // Add textfield 1
-        let textfield1 = UITextField(frame: CGRect(x: x,y: 60,width: 250,height: 40))
-            textfield1.layer.borderColor = UIColor.green.cgColor
-            textfield1.layer.borderWidth = 1.5
-            textfield1.layer.cornerRadius = 5
-            textfield1.placeholder = "Price"
-            textfield1.textAlignment = NSTextAlignment.center
-            subview.addSubview(textfield1)
-
-//        // Add textfield 2
-        let textfield2 = UITextField(frame: CGRect(x: x,y: textfield1.frame.maxY + 10,width: 250,height: 40))
-        textfield2.layer.borderColor = UIColor.blue.cgColor
-        textfield2.layer.borderWidth = 1.5
-        textfield2.layer.cornerRadius = 5
-        textfield1.layer.borderColor = UIColor.blue.cgColor
-        textfield2.placeholder = "Note"
-        textfield2.textAlignment = NSTextAlignment.center
-        subview.addSubview(textfield2)
-
-        // Add the subview to the alert's UI property
-        alert.customSubview = subview
-            alert.addButton("Process") {
-                       print("Logged in")
-                    let price = textfield1.text ?? ""
-                    let note = textfield2.text ?? ""
-                }
-                alert.showInfo("Payment", subTitle: paymentInfo)
-
-        } else {
-            let subview = UIView(frame: CGRect(x: 0,y: 0,width: self.view.frame.width - 10 ,height: 150))
-            let x = (subview.frame.width - 250) / 2
-
-            // Add textfield 1
-            let textfield1 = UITextField(frame: CGRect(x: x,y: 10,width: 250,height: 100))
-                textfield1.layer.borderColor = UIColor.green.cgColor
-                textfield1.layer.borderWidth = 1.5
-                textfield1.layer.cornerRadius = 5
-                textfield1.placeholder = "Note"
-                textfield1.textAlignment = NSTextAlignment.justified
-                subview.addSubview(textfield1)
-            alert.customSubview = subview
-
-
-
-        alert.addButton("Process") {
-            print("Logged in")
-            let note = textfield1.text ?? ""
-        }
-        alert.showInfo("Payment", subTitle: paymentInfo)
-        }
-
-    }
-    
-}
